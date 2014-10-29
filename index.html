@@ -53,7 +53,7 @@
 		$("document").ready(function() {
 
 			console.log("...");
-			if( getParameterByName("userToken")  != null) {
+			if( getParameterByName("userToken")  != null && getParameterByName("userToken") !== "") {
 				console.log("......");
 				$("body, html").scrollTop($('#androidApp').offset().top - 60);
 			};

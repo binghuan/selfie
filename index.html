@@ -18,13 +18,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
 	<style>
 		.toggleButton {
@@ -44,12 +41,30 @@
 
 	</style>
 
+	<script>
+
+		function getParameterByName(name) {
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		        results = regex.exec(location.search);
+		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+
+		$("document").ready(function() {
+
+			console.log("...");
+			if( getParameterByName("userToken")  != null) {
+				console.log("......");
+				$("body, html").scrollTop($('#androidApp').offset().top - 60);
+			};
+
+		});
+
+	</script>
+
   </head>
   <body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
 
 	<!--
 	    <header class="navbar navbar-static-top bs-docs-nav" style="margin-bottom:0px" id="top" role="banner">
@@ -104,12 +119,14 @@
 				</li>
 			</ol>
 		</div>
-		<div class="page-header">
+		<div class="page-header" id="androidApp">
 	        <h3>Step 2. Download Self Photographer Android App</h3>
+	        <p>This step is only necessary if you do not already have Selfie Photog Android app installed on your Andorid phone.</p>
 		</div>
 		<a href="https://play.google.com/store/apps/details?id=com.bh.android.selfietaker" target="_blank">
 			<img src="images/get_it_on_play_logo_large.png">
 		</a>
+
 		<div class="well">
 			<ol>
 				<li>

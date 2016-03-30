@@ -1,6 +1,8 @@
 Selfie Photographer
 ======
 
+<img src="icons/Icon.png" width="auto" height="240px"><br/>
+
 for Glassware Selfie Phtotographer.
 
 <p>

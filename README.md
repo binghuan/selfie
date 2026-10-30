@@ -1,5 +1,11 @@
 # Selfie Photographer
 
+## Feature overview
+
+![selfie — feature flow diagram](README-assets/project-preview.svg)
+
+Conceptual feature flow based on this repository; this is a documentation diagram, not an application screenshot.
+
 <img src="icons/Icon.png" width="auto" height="240px"><br/>
 
 A web-based installation guide for the Selfie Photographer Glassware application for Google Glass devices.
